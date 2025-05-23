@@ -13,7 +13,7 @@ public class TarefaDAO {
     public void salvarTarefas(ArrayList<Tarefa> tarefas) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(CAMINHO_ARQUIVO))) {
             for (Tarefa t : tarefas) {
-                // título|descrição|concluída
+              
                 writer.write(t.getTitulo() + "|" + t.getDescricao() + "|" + t.isConcluida());
                 writer.newLine();
             }
