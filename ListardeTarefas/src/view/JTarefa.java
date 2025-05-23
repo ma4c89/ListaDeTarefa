@@ -36,8 +36,7 @@ public class JTarefa extends JFrame {
         JPanel painelSuperior = new JPanel();
         painelSuperior.setLayout(new BoxLayout(painelSuperior, BoxLayout.Y_AXIS));
         painelSuperior.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
-        painelSuperior.setBackground(new Color(245, 245, 245)); // cinza claro, quase branco (tom natural e clean)
-
+        painelSuperior.setBackground(new Color(245, 245, 245));
 
         JLabel tituloLabel = new JLabel("Título:");
         tituloLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
@@ -47,13 +46,13 @@ public class JTarefa extends JFrame {
         campoDescricao = new JTextField(25);
 
         JButton botaoAdicionar = new JButton("Adicionar");
-        botaoAdicionar.setBackground(new Color(60, 179, 113)); // verde suave (MediumSeaGreen)
+        botaoAdicionar.setBackground(new Color(60, 179, 113));
         botaoAdicionar.setForeground(Color.WHITE);
         botaoAdicionar.setFocusPainted(false);
         botaoAdicionar.setFont(new Font("SansSerif", Font.BOLD, 13));
 
         JButton botaoConcluir = new JButton("Concluir");
-        botaoConcluir.setBackground(new Color(70, 130, 180)); // azul suave (SteelBlue)
+        botaoConcluir.setBackground(new Color(70, 130, 180));
         botaoConcluir.setForeground(Color.WHITE);
         botaoConcluir.setFocusPainted(false);
         botaoConcluir.setFont(new Font("SansSerif", Font.BOLD, 13));
@@ -77,7 +76,7 @@ public class JTarefa extends JFrame {
         linha2.add(campoDescricao);
 
         JPanel linha3 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        linha3.setBackground(new Color(245, 245, 245)); // cinza claro, quase branco (tom natural e clean)
+        linha3.setBackground(new Color(245, 245, 245)); 
         linha3.add(botaoAdicionar);
         linha3.add(botaoConcluir);
         linha3.add(botaoLimpar);
@@ -110,9 +109,9 @@ public class JTarefa extends JFrame {
     		    );
 
     		    if (confirmacao == JOptionPane.YES_OPTION) {
-    		        tarefas.clear(); // limpa a lista em memória
-    		        dao.salvarTarefas(tarefas); // atualiza o arquivo de armazenamento
-    		        atualizarLista(); // atualiza a interface gráfica
+    		        tarefas.clear(); 
+    		        dao.salvarTarefas(tarefas);
+    		        atualizarLista();
     		    }
     		}
 
